@@ -4,7 +4,28 @@
 <head>
     <meta charset="UTF-8">
     <title>Grille d'évaluation DAZN Business</title>
-    <style>
+    <style>.header-logos {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #111;
+  padding: 15px 30px;
+  border-radius: 10px;
+  margin-bottom: 30px;
+}
+
+.logo-left, .logo-right {
+  height: 50px;
+}
+
+.header-logos h1 {
+  flex: 1;
+  text-align: center;
+  color: white;
+  font-size: 22px;
+  margin: 0;
+}
+
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background-color: #f4f4f4;
@@ -61,7 +82,11 @@
     </style>
 </head>
 <body>
-<img class="logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/DAZN_logo.png/600px-DAZN_logo.png" alt="DAZN Business Logo" />
+<div class="header-logos">
+  <img class="logo-left" src="dazn-logo.png" alt="DAZN Logo">
+  <h1>Grille d’évaluation – DAZN Business</h1>
+  <img class="logo-right" src="assist-logo.png" alt="Assist Digital Logo">
+</div>
     <h1>Grille d'évaluation – DAZN Business</h1>
 
     <label>Numéro du ticket :</label>
