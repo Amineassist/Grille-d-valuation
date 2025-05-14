@@ -1,0 +1,156 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Grille d'évaluation DAZN Business</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f4f4f4;
+      padding: 40px;
+      color: #333;
+    }
+    .header-logos {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #111;
+      padding: 15px 30px;
+      border-radius: 10px;
+      margin-bottom: 30px;
+    }
+    .logo-left, .logo-right {
+      height: 50px;
+    }
+    .header-logos h1 {
+      flex: 1;
+      text-align: center;
+      color: white;
+      font-size: 22px;
+      margin: 0;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background-color: white;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      margin-top: 20px;
+    }
+    th, td {
+      padding: 12px 15px;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+      vertical-align: top;
+    }
+    th {
+      background-color: #222;
+      color: #fff;
+    }
+    select {
+      padding: 5px;
+      width: 100%;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    .score {
+      text-align: center;
+      font-weight: bold;
+      color: #007700;
+    }
+    .submit-btn, .pdf-btn {
+      margin-top: 20px;
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #e50914;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .submit-btn:hover, .pdf-btn:hover {
+      background-color: #ff1f2e;
+    }
+  </style>
+</head>
+<body>
+  <div class="header-logos">
+    <img class="logo-left" src="dazn-logo.png" alt="DAZN Logo">
+    <h1>Grille d’évaluation – DAZN Business</h1>
+    <img class="logo-right" src="assist-logo.png" alt="Assist Digital Logo">
+  </div>
+
+  <label>Numéro du ticket :</label>
+  <input type="text" id="ticketNumber" placeholder="Ex : 123456">
+
+  <label>Nom de l'agent :</label>
+  <input type="text" id="agentName" placeholder="Ex : Amine B.">
+
+  <form id="evaluationForm">
+    <table>
+      <thead>
+        <tr><th>Critère</th><th>Évaluation</th></tr>
+      </thead>
+      <tbody id="criteriaBody">
+        <tr><td>Nom réel utilisé</td>
+          <td><select><option value="fait">Fait</option><option value="non_fait">Non fait</option><option value="non_evaluable">Non évaluable</option></select></td></tr>
+        <tr><td>Formule de politesse</td>
+          <td><select><option value="fait">Fait</option><option value="non_fait">Non fait</option><option value="non_evaluable">Non évaluable</option></select></td></tr>
+        <tr><td>Reformulation de la demande</td>
+          <td><select><option value="fait">Fait</option><option value="non_fait">Non fait</option><option value="non_evaluable">Non évaluable</option></select></td></tr>
+        <tr><td>Pertinence de la réponse</td>
+          <td><select><option value="fait">Fait</option><option value="non_fait">Non fait</option><option value="non_evaluable">Non évaluable</option></select></td></tr>
+        <tr><td>Procédure conforme</td>
+          <td><select><option value="fait">Fait</option><option value="non_fait">Non fait</option><option value="non_evaluable">Non évaluable</option></select></td></tr>
+        <tr><td>Réponse claire</td>
+          <td><select><option value="fait">Fait</option><option value="non_fait">Non fait</option><option value="non_evaluable">Non évaluable</option></select></td></tr>
+        <tr><td>Réponse complète</td>
+          <td><select><option value="fait">Fait</option><option value="non_fait">Non fait</option><option value="non_evaluable">Non évaluable</option></select></td></tr>
+        <tr><td>Réponse cohérente</td>
+          <td><select><option value="fait">Fait</option><option value="non_fait">Non fait</option><option value="non_evaluable">Non évaluable</option></select></td></tr>
+        <tr><td>Orthographe</td>
+          <td><select><option value="fait">Fait</option><option value="non_fait">Non fait</option><option value="non_evaluable">Non évaluable</option></select></td></tr>
+        <tr><td>Ton professionnel</td>
+          <td><select><option value="fait">Fait</option><option value="non_fait">Non fait</option><option value="non_evaluable">Non évaluable</option></select></td></tr>
+        <tr><td>Empathie</td>
+          <td><select><option value="fait">Fait</option><option value="non_fait">Non fait</option><option value="non_evaluable">Non évaluable</option></select></td></tr>
+        <tr><td>Formule de clôture</td>
+          <td><select><option value="fait">Fait</option><option value="non_fait">Non fait</option><option value="non_evaluable">Non évaluable</option></select></td></tr>
+        <tr><td>Signature DAZN</td>
+          <td><select><option value="fait">Fait</option><option value="non_fait">Non fait</option><option value="non_evaluable">Non évaluable</option></select></td></tr>
+        <tr><td>Note interne claire</td>
+          <td><select><option value="fait">Fait</option><option value="non_fait">Non fait</option><option value="non_evaluable">Non évaluable</option></select></td></tr>
+        <tr><td>Note utile au suivi</td>
+          <td><select><option value="fait">Fait</option><option value="non_fait">Non fait</option><option value="non_evaluable">Non évaluable</option></select></td></tr>
+        <tr><td>Escalade justifiée</td>
+          <td><select><option value="fait">Fait</option><option value="non_fait">Non fait</option><option value="non_evaluable">Non évaluable</option></select></td></tr>
+        <tr><td>Escalade bien envoyée</td>
+          <td><select><option value="fait">Fait</option><option value="non_fait">Non fait</option><option value="non_evaluable">Non évaluable</option></select></td></tr>
+        <tr><td>Tentative de rétention</td>
+          <td><select><option value="fait">Fait</option><option value="non_fait">Non fait</option><option value="non_evaluable">Non évaluable</option></select></td></tr>
+        <tr><td>Argument utilisé (engagement, offre...)</td>
+          <td><select><option value="fait">Fait</option><option value="non_fait">Non fait</option><option value="non_evaluable">Non évaluable</option></select></td></tr>
+      </tbody>
+      <tfoot>
+        <tr><td><strong>Note finale (/100)</strong></td><td class="score"><span id="score">0</span> / 100</td></tr>
+      </tfoot>
+    </table>
+
+    <button type="button" class="submit-btn" onclick="calculateScore()">Calculer</button>
+    <button type="button" class="pdf-btn" onclick="window.print()">Exporter en PDF</button>
+  </form>
+
+  <script>
+    function calculateScore() {
+      const selects = document.querySelectorAll('#criteriaBody select');
+      let total = 0, count = 0;
+      selects.forEach(select => {
+        if (select.value === "fait") total++;
+        if (select.value !== "non_evaluable") count++;
+      });
+      const score = count > 0 ? Math.round((total / count) * 100) : 0;
+      document.getElementById("score").innerText = score;
+    }
+  </script>
+</body>
+</html>
